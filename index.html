@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4caf50" />
+  <title>Минималистичные Заметки</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/sigma.png" sizes="512x512" />
+</head>
+<body>
+  <header>
+    <h1>Мои заметки</h1>
+    <div id="status">Статус: <span id="connectionStatus">Онлайн</span></div>
+    <button id="refreshStatus" class="action-btn">Обновить статус</button>
+  </header>
+  <main>
+    <div id="notesContainer" class="notes-container"></div>
+    <button id="addNoteBtn" class="action-btn">Добавить новую заметку</button>
+  </main>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle">Новая заметка</h2>
+      <form id="noteForm">
+        <label for="noteTitle">Название:</label>
+        <input type="text" id="noteTitle" name="title" required>
+        <label for="noteDesc">Описание:</label>
+        <textarea id="noteDesc" name="description" required></textarea>
+        <input type="hidden" id="noteId">
+        <button type="submit" class="action-btn">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
